@@ -8,11 +8,19 @@ const App = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
+  type PostType = {
+    id: number;
+    title: string;
+    userId: string;
+    author: string;
+    body: string;
+  };
+
   const [title, setTitle] = useState("");
   const [userId, setUserId] = useState("");
   const [author, setAuthor] = useState("");
   const [body, setBody] = useState("");
-  const [posts, setPosts] = useState(() => {
+  const [posts, setPosts] = useState<PostType[]>(() => {
     const storedPosts = localStorage.getItem("posts");
     return storedPosts ? JSON.parse(storedPosts) : [];
   });
@@ -32,7 +40,7 @@ const App = () => {
     localStorage.setItem("posts", JSON.stringify(posts));
   }, [posts]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const newPost = {
@@ -44,14 +52,6 @@ const App = () => {
     };
 
     setPosts((prevPosts) => [newPost, ...prevPosts]);
-    setCurrentPage(1);
-
-    setTitle("");
-    setUserId("");
-    setAuthor("");
-    setBody("");
-
-    setSuccessMessage("Post added successfully!");
   };
 
   useEffect(() => {

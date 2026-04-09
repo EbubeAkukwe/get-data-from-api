@@ -6,7 +6,7 @@ type postType = {
   body: string;
 };
 
-const Post = ({ id, userId, author, title, body }: postType) => {
+const Post = ({ userId, author, title, body }: postType) => {
   return (
     <div className="post-card">
       <p className="post-title">
