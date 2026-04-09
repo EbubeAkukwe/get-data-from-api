@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: #111111;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  padding: 14px 18px;
+  border: 1px solid #111111;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #111111;
+
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  letter-spacing: -0.03em;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-card {
+  border: 1px solid #111111;
+  padding: 18px;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.post-title,
+.post-author,
+.post-body {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.post-title,
+.post-author {
+  margin-bottom: 8px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 36px;
+  flex-wrap: wrap;
+}
+
+.page-indicator {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.page-btn,
+.submit-btn {
+  border: 1px solid #111111;
+  background: #111111;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.page-btn:hover,
+.submit-btn:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.page-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.form-wrapper {
+  margin-top: 16px;
+}
+
+.post-form {
+  border: 1px solid #111111;
+  border-radius: 18px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid #111111;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: #111111;
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-width: 2px;
+}
+
+.form-textarea {
+  min-height: 130px;
+  resize: vertical;
+}
