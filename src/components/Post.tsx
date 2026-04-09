@@ -1,7 +1,7 @@
 type postType = {
   id: number;
   title: string;
-  userId: number;
+  userId: string;
   author?: string; //optional to say the author
   body: string;
 };
